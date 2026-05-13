@@ -183,7 +183,7 @@ RegisterNetEvent('tmg-doorlock:server:updateState', function(doorID, locked, src
         { ["upsert"] = true }
     )
 
-    exports['tmgnosql']:InsertDocument('door_logs', {
+    exports['tmgnosql']:UpdateMany('door_logs', {
         ["door"] = doorID,
         ["citizenid"] = Player.PlayerData.citizenid,
         ["action"] = locked and "LOCKED" or "UNLOCKED",
@@ -247,7 +247,7 @@ RegisterNetEvent('tmg-doorlock:server:saveNewDoor', function(data, doubleDoor)
         configData.objCoords = data.coords
     end
 
-    local success = exports['tmgnosql']:InsertDocument('custom_doors', configData)
+    local success = exports['tmgnosql']:UpdateMany('custom_doors', configData)
 
     if success then
         Config.DoorList[identifier] = configData
