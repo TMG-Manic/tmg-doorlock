@@ -3,7 +3,7 @@ QBCore Framework
 Copyright (C) 2015-2022 ESX (Jérémie N'gadi), Joshua Eger
 
 TMG Mainframe Modifications
-Copyright (C) 2026 TMG_Manic / TMG Clan
+Copyright (C) 2024 TMG_Manic / TMG Clan
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
